@@ -34,7 +34,7 @@
       categoryDisplay.textContent = `Category = "Underweight"`;
       tips.innerHTML = `<h1>🧠BMI-Based Health Tips</h1>
                         <br>
-                       <h2>Underweight (BMI < 18.5)</h2>
+                       <h2>Underweight (BMI ≤ 18.4)</h2>
             <br>  
             <b>Goal:</b> Gain weight safely and build strength.
             <br>
@@ -110,9 +110,9 @@
         underweight();
       }else if (bmi >= 18.5 && bmi <= 24.9) {
         normal();
-      }else if (bmi => 25 && bmi <= 29.9) {
+      }else if (bmi >= 25 && bmi <= 29.9) {
         overweight();
-      }else if (bmi => 30) {
+      }else if (bmi >= 30) {
         obese();
       }
     } else {
