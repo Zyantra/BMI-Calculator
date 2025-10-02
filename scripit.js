@@ -19,9 +19,9 @@
     // Convert height to meters
     if (hUnit === 'Inches') {
       height = height * 0.0254;
-    } else {
+    } else if(hUnit === 'centimeter'){
       height = height/100;
-    }
+    };
      // 'Meter' requires no conversion
 
     // Convert weight to kilograms
@@ -126,4 +126,5 @@
   footPannel.addEventListener('click', function(){
     window.scrollTo({ top : 0, behavior: "smooth"});
   })
+
 
