@@ -19,9 +19,11 @@
     // Convert height to meters
     if (hUnit === 'Inches') {
       height = height * 0.0254;
-    } else {
+    } if (hUnit === 'Centimeter') {
       height = height/100;
-    };
+    } else {
+      height = height;
+    }
      // 'Meter' requires no conversion
 
     // Convert weight to kilograms
@@ -106,7 +108,7 @@
     if (height > 0 && weight > 0) {
       const bmi = weight / (height * height);
       bmiDisplay.textContent = `BMI = ${bmi.toFixed(2)}`;
-      if(bmi <= 18.4) {
+      if(bmi > 0 && bmi <= 18.4) {
         underweight();
       }else if (bmi >= 18.5 && bmi <= 24.9) {
         normal();
@@ -114,18 +116,18 @@
         overweight();
       }else if (bmi >= 30 && bmi <= 50) {
         obese();
-      }
-    } else {
+      }else {
       bmiDisplay.textContent = 'BMI = Invalid input';
+      categoryDisplay.textContent = `Category = null`;
+    }
     }
   });
   clear.addEventListener('click', function(){
     location.reload();
   }); 
 
-  footPannel.addEventListener('click', function(){
-    window.scrollTo({ top : 0, behavior: "smooth"});
-  })
-
+  // footPannel.addEventListener('click', function(){
+  //   window.scrollTo({ top : 0, behavior: "smooth"});
+  // })
 
 
