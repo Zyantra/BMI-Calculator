@@ -19,7 +19,7 @@
     // Convert height to meters
     if (hUnit === 'Inches') {
       height = height * 0.0254;
-    } else if(hUnit === 'centimeter'){
+    } else {
       height = height/100;
     };
      // 'Meter' requires no conversion
@@ -126,5 +126,6 @@
   footPannel.addEventListener('click', function(){
     window.scrollTo({ top : 0, behavior: "smooth"});
   })
+
 
 
