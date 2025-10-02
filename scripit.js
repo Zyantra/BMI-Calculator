@@ -112,7 +112,7 @@
         normal();
       }else if (bmi >= 25 && bmi <= 29.9) {
         overweight();
-      }else if (bmi >= 30) {
+      }else if (bmi >= 30 && bmi <= 50) {
         obese();
       }
     } else {
@@ -126,3 +126,4 @@
   footPannel.addEventListener('click', function(){
     window.scrollTo({ top : 0, behavior: "smooth"});
   })
+
